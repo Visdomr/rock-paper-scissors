@@ -1,18 +1,34 @@
 import random
 
-options = ["rock", "paper", "scissors"]
-my_choice = input("Choose Rock, Paper, or scissors to start: ")
-computer_choice = random.choice(options)
-print("You picked: ", my_choice)
-print("Computer picked: ", computer_choice)
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
 
-if my_choice == computer_choice:
-    print("It's a tie!")
-elif my_choice == "rock" and computer_choice == "scissors":
-    print("You win!")
-elif my_choice == "paper" and computer_choice == "rock":
-    print("You win!")
-elif my_choice == "scissors" and computer_choice == "paper":
-    print("You win!")
-else:
-    print("You lose!")
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+
+print("Welcome to Rock, Paper, Scissors!")
+player_choice = input(
+    "Please make your choice. Enter 0 for Rock, 1 for Paper, 2 for Scissors: ")
+computer_choice = random.randint(a:0, b:2)
+print(f"Computer chose: {computer_choice}")
